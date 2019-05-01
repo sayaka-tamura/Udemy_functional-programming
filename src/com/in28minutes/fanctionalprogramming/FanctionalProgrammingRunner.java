@@ -23,6 +23,7 @@ public class FanctionalProgrammingRunner {
 	}
 
 	private static void printWithFP(List<String> list) {
-		list.stream().forEach(element -> System.out.println("element -" + element)); // Lambda Expression
+		list.stream().forEach(element -> System.out.println("element -" + element)); // Repeat what you'd like to do
+																						// here
 	}
 }
