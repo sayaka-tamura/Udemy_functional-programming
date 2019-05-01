@@ -14,7 +14,7 @@ public class FPNumberRunnner {
 	public static void main(String[] args) {
 		List<Integer> numbers = List.of(4, 6, 8, 13, 3, 15);
 		// lambda functin to print out each numbers in the list
-		numbers.stream().forEach(element -> System.out.println(element));
+		// numbers.stream().forEach(element -> System.out.println(element));
 
 		int sum = fpSum(numbers);
 
@@ -34,7 +34,11 @@ public class FPNumberRunnner {
 	// 1. Functional Programming avoid mutation of variables
 	// 2. Focucing on to tell "What to do" inside(reduce elements, start from 0...)
 	private static int fpSum(List<Integer> numbers) {
-		return numbers.stream().reduce(0, (number1, number2) -> number1 + number2);
+		// reduce():reduce numbers to one result
+		return numbers.stream().reduce(0, (number1, number2) -> {
+			System.out.println(number1 + " " + number2);
+			return number1 + number2;
+		});
 	}
 
 	// Regular way to print out the sum of the list
@@ -42,7 +46,8 @@ public class FPNumberRunnner {
 	private static int nomalSum(List<Integer> numbers) {
 		int sum = 0;
 		for (int number : numbers) {
-			sum += number; // mutation: changing a value while looping
+			// mutation: changing a value while looping
+			sum += number;
 		}
 		return sum;
 	}
