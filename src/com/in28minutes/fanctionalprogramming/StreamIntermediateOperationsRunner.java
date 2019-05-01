@@ -1,8 +1,8 @@
 /**
  * @author : Sayaka Tamura
  * May 1, 2019
- * Udemy Learn Java Unit Testing with JUnit 5
- * 
+ * Udemy Fanctional Programming
+ * https://www.youtube.com/watch?v=aFCNPHfvqEU&feature=youtu.be
  */
 package com.in28minutes.fanctionalprogramming;
 
