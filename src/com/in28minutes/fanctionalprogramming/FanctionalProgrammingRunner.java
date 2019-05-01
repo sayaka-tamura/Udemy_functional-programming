@@ -57,7 +57,7 @@ public class FanctionalProgrammingRunner {
 		}
 	}
 
-	// print a String list using lambda fanction
+	// print a String list using lambda function
 	private static void printStringWithFP(List<String> list) {
 		list.stream().forEach(element -> System.out.println("element -" + element)); // Repeat what you'd like to do
 																						// here
@@ -69,13 +69,13 @@ public class FanctionalProgrammingRunner {
 		).forEach(element -> System.out.println("element -" + element)); // Repeat what you'd like to do here
 	}
 
-	// Print Even Numbers using lambda fanction
+	// Print Even Numbers using lambda function
 	private static void printOddNumWithFPWithFiltering(List<Integer> list_num) {
 		list_num.stream().filter(element -> element % 2 == 1)
 				.forEach(element -> System.out.println("Odd element -" + element));
 	}
 
-	// Print Odd Numbers using lambda fanction
+	// Print Odd Numbers using lambda function
 	private static void printEvenNumWithFPWithFiltering(List<Integer> list_num) {
 		list_num.stream().filter(element -> element % 2 == 0)
 				.forEach(element -> System.out.println("Even element -" + element));
