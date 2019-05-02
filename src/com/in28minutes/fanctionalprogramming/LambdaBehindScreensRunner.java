@@ -46,7 +46,18 @@ public class LambdaBehindScreensRunner {
 
 		// Print only even numbers from a list
 		System.out.println("List 1: ");
-		List.of(23, 43, 34, 45, 36, 48).stream().filter(n -> n % 2 == 0).map(n -> n * n)
+		List.of(23, 43, 34, 45, 36, 48).stream().filter(createEvenPredicate()).map(n -> n * n)
+				.forEach(e -> System.out.println(e));
+
+		// Extract local variable : filter(n -> n % 2 == 0)
+		System.out.println("List 1-2: ");
+		// 1.Storing functions in variable: evenPredicate/oddPredicate
+		// 3.Returning functions from method: createEvenPredicate()
+		Predicate<? super Integer> evenPredicate = createEvenPredicate();
+		Predicate<? super Integer> oddPredicate = n -> n % 2 == 1;
+
+		// 2. Passing functions to methods:.filter(evenPredicate)
+		List.of(23, 43, 34, 45, 36, 48).stream().filter(evenPredicate).map(n -> n * n)
 				.forEach(e -> System.out.println(e));
 
 		// "Inside of filter()": Predicate interface returns true/false
@@ -69,6 +80,10 @@ public class LambdaBehindScreensRunner {
 		System.out.println("List 2: ");
 		List.of(23, 43, 34, 45, 36, 48).stream().filter(new EvenNumberPredicate()).map(new NumberSquareMapper())
 				.forEach(new SystemOutConsumer());
+	}
+
+	private static Predicate<? super Integer> createEvenPredicate() {
+		return n -> n % 2 == 0;
 	}
 
 }
