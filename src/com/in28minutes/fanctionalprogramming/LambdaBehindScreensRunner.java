@@ -40,6 +40,10 @@ class NumberSquareMapper implements Function<Integer, Integer> {
 public class LambdaBehindScreensRunner {
 	// Ctrl + click: move to the method source
 	public static void main(String[] args) {
+		// 1. Storing functions in variable
+		// 2. Passing functions to methods
+		// 3. Returning functions from method
+
 		// Print only even numbers from a list
 		System.out.println("List 1: ");
 		List.of(23, 43, 34, 45, 36, 48).stream().filter(n -> n % 2 == 0).map(n -> n * n)
