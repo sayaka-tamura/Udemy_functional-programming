@@ -65,7 +65,6 @@ public class LambdaBehindScreensRunner {
 		System.out.println("List 2: ");
 		List.of(23, 43, 34, 45, 36, 48).stream().filter(new EvenNumberPredicate()).map(new NumberSquareMapper())
 				.forEach(new SystemOutConsumer());
-
 	}
 
 }
